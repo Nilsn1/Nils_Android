@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1016214590893",
+    "project_id": "nils-android",
+    "storage_bucket": "nils-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016214590893:android:75b6ad46083dc486e97d24",
+        "android_client_info": {
+          "package_name": "com.nilscreation.mytestapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016214590893-09f76t8v8jhfjdua0l7fm9kj7i7bvrch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8Upq34UB5a5_3Hgw38o7MWfYJNeeqh6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016214590893-09f76t8v8jhfjdua0l7fm9kj7i7bvrch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
