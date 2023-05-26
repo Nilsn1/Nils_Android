@@ -1,19 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_background"
+    android:orientation="vertical"
     tools:context=".BundlePassingActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_extrabold"
+            android:text="Budle Data Passing"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
         android:orientation="vertical"
         android:padding="20dp"
-        android:background= "@color/white"
-        android:gravity="center"
         tools:ignore="MissingConstraints">
 
         <EditText
@@ -21,27 +46,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:text="Name"
-            android:hint="Enter Your Name"/>
+            android:background="@drawable/custominput"
+            android:fontFamily="@font/nunito_bold"
+            android:hint="Enter Your Name" />
 
         <EditText
             android:id="@+id/place"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:text="Place"
-            android:hint="Enter Your Place"/>
+            android:background="@drawable/custominput"
+            android:fontFamily="@font/nunito_bold"
+            android:hint="Enter Your Place" />
 
         <EditText
             android:id="@+id/rollno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
+            android:background="@drawable/custominput"
+            android:fontFamily="@font/nunito_bold"
             android:hint="Enter Your Roll No"
-            android:inputType="number"/>
+            android:inputType="number" />
 
         <Button
             android:id="@+id/submit"
+            style="@style/custom_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Submit" />
@@ -49,4 +79,4 @@
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -8,6 +8,14 @@
         <item name="fontFamily">@font/poppins_bold</item>
     </style>
 
+    <style name="custom_button">
+        <item name="cornerRadius">12dp</item>
+        <item name="background">@color/primary</item>
+        <item name="fontFamily">@font/nunito_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
     <style name="MyCardViewStyle">
         <item name="cardCornerRadius">25dp</item>
         <item name="cardBackgroundColor">@color/card_background</item>

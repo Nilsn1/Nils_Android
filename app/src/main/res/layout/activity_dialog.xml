@@ -35,28 +35,29 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <Button
             android:id="@+id/single"
+            style="@style/custom_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Single button"
-            tools:layout_editor_absoluteY="20dp" />
+            android:text="Single button" />
 
         <Button
             android:id="@+id/two"
+            style="@style/custom_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Two buttons"
-            tools:layout_editor_absoluteY="20dp" />
+            android:text="Two buttons" />
 
         <Button
             android:id="@+id/three"
+            style="@style/custom_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Three buttons"
-            tools:layout_editor_absoluteY="20dp" />
+            android:text="Three buttons" />
 
     </LinearLayout>
 
