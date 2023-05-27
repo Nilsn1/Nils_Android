@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTestApp">
         <activity
+            android:name=".RecyclerviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SpinnerActivity"
+            android:exported="false" />
+        <activity
             android:name=".ActivitytoFragment"
             android:exported="false" />
         <activity

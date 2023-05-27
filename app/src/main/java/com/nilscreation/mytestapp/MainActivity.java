@@ -10,8 +10,8 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    CardView lifeCycle, radioButton, cardView, tableLayout, animations, dialog, customDialog, listview,
-            notification, bundlePassing, tabLayout, navigation, bottomNavigationView, clipBoard,
+    CardView lifeCycle, radioButton, spinner, cardView, tableLayout, animations, dialog, customDialog, listview,
+            recyclerView, notification, bundlePassing, tabLayout, navigation, bottomNavigationView, clipBoard,
             sharedPreferences, notesapp, calculatorApp, demoActivity, fireBase;
 
     @Override
@@ -21,12 +21,14 @@ public class MainActivity extends AppCompatActivity {
 
         lifeCycle = findViewById(R.id.lifeCycle);
         radioButton = findViewById(R.id.radioButton);
+        spinner = findViewById(R.id.spinner);
         cardView = findViewById(R.id.cardview);
         tableLayout = findViewById(R.id.tableLayout);
         animations = findViewById(R.id.animations);
         dialog = findViewById(R.id.dialog);
         customDialog = findViewById(R.id.customDialog);
         listview = findViewById(R.id.listview);
+        recyclerView = findViewById(R.id.recyclerView);
         notification = findViewById(R.id.notification);
         tabLayout = findViewById(R.id.tablayout);
         navigation = findViewById(R.id.navigation);
@@ -57,6 +59,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, RadioButtonActivity.class);
                 startActivity(intent);
 
+            }
+        });
+
+        spinner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SpinnerActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -115,6 +125,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(MainActivity.this, ListviewActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        recyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, RecyclerviewActivity.class);
                 startActivity(intent);
 
             }
