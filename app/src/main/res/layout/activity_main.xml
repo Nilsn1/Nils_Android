@@ -83,7 +83,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardview"
+                android:id="@+id/autoCompleteTextView"
                 style="@style/MyCardViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -92,7 +92,7 @@
                     style="@style/MyTextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cardview" />
+                    android:text="AutoComplete Textview" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -328,6 +328,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Firebase" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/firebaseAuth"
+                style="@style/MyCardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/MyTextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Firebase Authentication" />
 
             </androidx.cardview.widget.CardView>
 

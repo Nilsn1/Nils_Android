@@ -10,9 +10,10 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    CardView lifeCycle, radioButton, spinner, cardView, tableLayout, animations, dialog, customDialog, listview,
-            recyclerView, notification, bundlePassing, tabLayout, navigation, bottomNavigationView, clipBoard,
-            sharedPreferences, notesapp, calculatorApp, demoActivity, fireBase;
+    CardView lifeCycle, radioButton, spinner, autoCompleteTextView, tableLayout, animations, dialog,
+            customDialog, listview, recyclerView, notification, bundlePassing, tabLayout, navigation,
+            bottomNavigationView, clipBoard, sharedPreferences, notesapp, calculatorApp, demoActivity,
+            fireBase, firebaseAuthentication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         lifeCycle = findViewById(R.id.lifeCycle);
         radioButton = findViewById(R.id.radioButton);
         spinner = findViewById(R.id.spinner);
-        cardView = findViewById(R.id.cardview);
+        autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
         tableLayout = findViewById(R.id.tableLayout);
         animations = findViewById(R.id.animations);
         dialog = findViewById(R.id.dialog);
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         calculatorApp = findViewById(R.id.calculatorapp);
         demoActivity = findViewById(R.id.demoactivity);
         fireBase = findViewById(R.id.fireBase);
+        firebaseAuthentication = findViewById(R.id.firebaseAuth);
 
 
         lifeCycle.setOnClickListener(new View.OnClickListener() {
@@ -70,11 +72,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        cardView.setOnClickListener(new View.OnClickListener() {
+        autoCompleteTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, CardviewActivity.class);
+                Intent intent = new Intent(MainActivity.this, AutoCompleteTextViewActivity.class);
                 startActivity(intent);
 
             }
@@ -228,8 +230,7 @@ public class MainActivity extends AppCompatActivity {
         demoActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(MainActivity.this, DemoActivity.class);
+                Intent intent = new Intent(MainActivity.this, AutoCompleteTextViewActivity.class);
                 startActivity(intent);
             }
         });
@@ -238,6 +239,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 changeActivity(FirebaseActivity.class);
+            }
+        });
+
+        firebaseAuthentication.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FirebaseSignupActivity.class);
+                startActivity(intent);
             }
         });
 

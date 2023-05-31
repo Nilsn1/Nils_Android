@@ -12,6 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTestApp">
         <activity
+            android:name=".AutoCompleteTextViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FirebaseLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FirebaseSignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EmiCalculator"
+            android:exported="false" />
+        <activity
             android:name=".RecyclerviewActivity"
             android:exported="false" />
         <activity

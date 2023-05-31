@@ -24,10 +24,10 @@ public class RecyclerviewActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         arrayList = new ArrayList<>();
-        arrayList.add(new rv_model("John", R.drawable.person));
-        arrayList.add(new rv_model("Rock", R.drawable.person));
-        arrayList.add(new rv_model("Matt", R.drawable.person));
-        arrayList.add(new rv_model("Brat", R.drawable.person));
+        arrayList.add(new rv_model("Ajay", R.drawable.person));
+        arrayList.add(new rv_model("Rohan", R.drawable.person));
+        arrayList.add(new rv_model("Nirav", R.drawable.person));
+        arrayList.add(new rv_model("Sunil", R.drawable.person));
 
         rv_adapter adapter = new rv_adapter(this, arrayList);
         recyclerView.setAdapter(adapter);
