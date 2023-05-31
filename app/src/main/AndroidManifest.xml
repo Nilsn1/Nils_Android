@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTestApp">
         <activity
+            android:name=".CustomToolbarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OptionMenuActivity"
+            android:exported="false" />
+        <activity
             android:name=".AutoCompleteTextViewActivity"
             android:exported="false" />
         <activity
@@ -83,9 +89,6 @@
             android:exported="false" />
         <activity
             android:name=".SharedpreferencesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CardviewActivity"
             android:exported="false" />
         <activity
             android:name=".ClipboardActivity"

@@ -11,8 +11,8 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     CardView lifeCycle, radioButton, spinner, autoCompleteTextView, tableLayout, animations, dialog,
-            customDialog, listview, recyclerView, notification, bundlePassing, tabLayout, navigation,
-            bottomNavigationView, clipBoard, sharedPreferences, notesapp, calculatorApp, demoActivity,
+            customDialog, listview, recyclerView, notification, bundlePassing, tabLayout, optionMenu, customToolbar,
+            navigation, bottomNavigationView, clipBoard, sharedPreferences, notesapp, calculatorApp, demoActivity,
             fireBase, firebaseAuthentication;
 
     @Override
@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         notification = findViewById(R.id.notification);
         tabLayout = findViewById(R.id.tablayout);
+        optionMenu = findViewById(R.id.optionMenu);
+        customToolbar = findViewById(R.id.customToolbar);
         navigation = findViewById(R.id.navigation);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         clipBoard = findViewById(R.id.clipboard);
@@ -75,30 +77,40 @@ public class MainActivity extends AppCompatActivity {
         autoCompleteTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(MainActivity.this, AutoCompleteTextViewActivity.class);
                 startActivity(intent);
-
             }
         });
 
         tableLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(MainActivity.this, TableLayoutActivity.class);
                 startActivity(intent);
+            }
+        });
 
+        optionMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, OptionMenuActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        customToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CustomToolbarActivity.class);
+                startActivity(intent);
             }
         });
 
         animations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(MainActivity.this, AnimationsActivity.class);
                 startActivity(intent);
-
             }
         });
 
