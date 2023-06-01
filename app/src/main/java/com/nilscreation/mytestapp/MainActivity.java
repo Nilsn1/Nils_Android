@@ -10,7 +10,7 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    CardView lifeCycle, radioButton, spinner, autoCompleteTextView, tableLayout, animations, dialog,
+    CardView lifeCycle, snackBar, radioButton, spinner, autoCompleteTextView, tableLayout, animations, dialog,
             customDialog, listview, recyclerView, notification, bundlePassing, tabLayout, optionMenu, customToolbar,
             navigation, bottomNavigationView, clipBoard, sharedPreferences, notesapp, calculatorApp, demoActivity,
             fireBase, firebaseAuthentication;
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         lifeCycle = findViewById(R.id.lifeCycle);
+        snackBar = findViewById(R.id.snackBar);
         radioButton = findViewById(R.id.radioButton);
         spinner = findViewById(R.id.spinner);
         autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
@@ -49,10 +50,16 @@ public class MainActivity extends AppCompatActivity {
         lifeCycle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(MainActivity.this, LifeCycleActivity.class);
                 startActivity(intent);
+            }
+        });
 
+        snackBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SnackBarActivity.class);
+                startActivity(intent);
             }
         });
 

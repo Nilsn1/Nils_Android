@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTestApp">
         <activity
+            android:name=".SnackBarActivity"
+            android:exported="false" />
+        <activity
             android:name=".CustomToolbarActivity"
             android:exported="false" />
         <activity
