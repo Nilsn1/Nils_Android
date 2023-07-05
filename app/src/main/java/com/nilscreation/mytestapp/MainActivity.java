@@ -10,10 +10,10 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    CardView lifeCycle, snackBar, radioButton, spinner, autoCompleteTextView, tableLayout, animations, dialog,
+    CardView lifeCycle, onBoarding, snackBar, radioButton, spinner, autoCompleteTextView, tableLayout, animations, dialog,
             customDialog, listview, recyclerView, notification, bundlePassing, tabLayout, optionMenu, customToolbar,
-            navigation, bottomNavigationView, clipBoard, sharedPreferences, notesapp, calculatorApp, demoActivity,
-            fireBase, firebaseAuthentication;
+            navigation, bottomNavigationView, clipBoard, sharedPreferences, notesapp, calculator, bmiCalculator, emiCalculator, demoActivity,
+            retrofitLibrary, fireBase, firebaseAuthentication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         lifeCycle = findViewById(R.id.lifeCycle);
+        onBoarding = findViewById(R.id.onBoarding);
         snackBar = findViewById(R.id.snackBar);
         radioButton = findViewById(R.id.radioButton);
         spinner = findViewById(R.id.spinner);
@@ -41,8 +42,11 @@ public class MainActivity extends AppCompatActivity {
         bundlePassing = findViewById(R.id.bundlepassing);
         sharedPreferences = findViewById(R.id.sharedpreferences);
         notesapp = findViewById(R.id.notesapp);
-        calculatorApp = findViewById(R.id.calculatorapp);
+        calculator = findViewById(R.id.calculatorapp);
+        bmiCalculator = findViewById(R.id.bmiCalculator);
+        emiCalculator = findViewById(R.id.emiCalculator);
         demoActivity = findViewById(R.id.demoactivity);
+        retrofitLibrary = findViewById(R.id.retrofitLibrary);
         fireBase = findViewById(R.id.fireBase);
         firebaseAuthentication = findViewById(R.id.firebaseAuth);
 
@@ -51,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LifeCycleActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        onBoarding.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, OnBoardingActivity.class);
                 startActivity(intent);
             }
         });
@@ -237,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        calculatorApp.setOnClickListener(new View.OnClickListener() {
+        calculator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -245,11 +257,32 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        bmiCalculator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BmiCalculatorActivity.class);
+                startActivity(intent);
+            }
+        });
+        emiCalculator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, EmiCalculatorActivity.class);
+                startActivity(intent);
+            }
+        });
 
         demoActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AutoCompleteTextViewActivity.class);
+                Intent intent = new Intent(MainActivity.this, DemoActivity.class);
+                startActivity(intent);
+            }
+        });
+        retrofitLibrary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RetrofitLibActivity.class);
                 startActivity(intent);
             }
         });

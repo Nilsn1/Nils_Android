@@ -9,15 +9,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class ActivitytoFragment extends AppCompatActivity {
+public class BmiCalculatorActivity extends AppCompatActivity {
 
     EditText weight, height;
     Button calculate;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activityto_fragment);
+        setContentView(R.layout.activity_bmi_calculator);
 
         weight = findViewById(R.id.weight);
         height = findViewById(R.id.height);
@@ -30,7 +31,7 @@ public class ActivitytoFragment extends AppCompatActivity {
                 int userweight = Integer.parseInt(weight.getText().toString());
                 int userheight = Integer.parseInt(height.getText().toString());
 
-                bundle.putInt("weight", userheight);
+                bundle.putInt("weight", userweight);
                 bundle.putInt("height", userheight);
 
                 FragmentManager fragmentManager = getSupportFragmentManager();
@@ -38,10 +39,11 @@ public class ActivitytoFragment extends AppCompatActivity {
                 BmiFragment bmiFragment = new BmiFragment();
 
                 bmiFragment.setArguments(bundle);
-                fragmentTransaction.add(R.id.container,bmiFragment);
+                fragmentTransaction.add(R.id.container, bmiFragment);
                 fragmentTransaction.commit();
 
             }
         });
+
     }
 }
