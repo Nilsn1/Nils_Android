@@ -409,7 +409,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/fireBase"
+                android:id="@+id/firebaseRealtime"
                 style="@style/MyCardViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -418,7 +418,7 @@
                     style="@style/MyTextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Firebase" />
+                    android:text="Firebase Realtime DB" />
 
             </androidx.cardview.widget.CardView>
 

@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTestApp">
         <activity
+            android:name=".RecyclerViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".EmiCalculatorActivity"
             android:exported="false" />
         <activity
@@ -48,13 +51,13 @@
             android:name=".FirebaseLoginActivity"
             android:exported="false" />
         <activity
+            android:name=".FirebaseRealtimeActivity"
+            android:exported="false" />
+        <activity
             android:name=".FirebaseSignupActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RecyclerviewActivity"
             android:exported="false" />
         <activity
             android:name=".SpinnerActivity"
@@ -62,13 +65,6 @@
         <activity
             android:name=".BottomNavigationActivity"
             android:exported="false" />
-        <activity
-            android:name=".FirebaseActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
         <activity
             android:name=".LifeCycleActivity"
             android:exported="false">

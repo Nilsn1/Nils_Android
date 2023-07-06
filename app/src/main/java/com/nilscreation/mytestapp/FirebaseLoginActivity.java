@@ -54,7 +54,6 @@ public class FirebaseLoginActivity extends AppCompatActivity {
                             Toast.makeText(FirebaseLoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(FirebaseLoginActivity.this, MainActivity.class);
                             startActivity(intent);
-
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -63,7 +62,6 @@ public class FirebaseLoginActivity extends AppCompatActivity {
                         }
                     });
                 }
-
             }
         });
 

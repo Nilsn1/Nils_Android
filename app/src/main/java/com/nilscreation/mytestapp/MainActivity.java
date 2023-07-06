@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     CardView lifeCycle, onBoarding, snackBar, radioButton, spinner, autoCompleteTextView, tableLayout, animations, dialog,
             customDialog, listview, recyclerView, notification, bundlePassing, tabLayout, optionMenu, customToolbar,
             navigation, bottomNavigationView, clipBoard, sharedPreferences, notesapp, calculator, bmiCalculator, emiCalculator, demoActivity,
-            retrofitLibrary, fireBase, firebaseAuthentication;
+            retrofitLibrary, firebaseRealtime, firebaseAuthentication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         emiCalculator = findViewById(R.id.emiCalculator);
         demoActivity = findViewById(R.id.demoactivity);
         retrofitLibrary = findViewById(R.id.retrofitLibrary);
-        fireBase = findViewById(R.id.fireBase);
+        firebaseRealtime = findViewById(R.id.firebaseRealtime);
         firebaseAuthentication = findViewById(R.id.firebaseAuth);
 
 
@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, RecyclerviewActivity.class);
+                Intent intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
                 startActivity(intent);
 
             }
@@ -287,10 +287,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        fireBase.setOnClickListener(new View.OnClickListener() {
+        firebaseRealtime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeActivity(FirebaseActivity.class);
+                Intent intent = new Intent(MainActivity.this, FirebaseRealtimeActivity.class);
+                startActivity(intent);
             }
         });
 
