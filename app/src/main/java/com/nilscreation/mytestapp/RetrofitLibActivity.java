@@ -33,7 +33,7 @@ public class RetrofitLibActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://raw.githubusercontent.com/Nilsn1/nilscreation/main/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://nilsn1.github.io/nilscreation/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

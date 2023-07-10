@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EmiCalculator">
+    tools:context=".EmiCalculatorActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolbar"
@@ -54,6 +54,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
+                android:id="@+id/txtAmount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/custominput"
@@ -68,9 +69,13 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <SeekBar
+            android:id="@+id/sbAmount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp" />
+            android:layout_marginVertical="10dp"
+            android:max="10000000"
+            android:min="1000"
+            android:progress="10000" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -88,6 +93,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
+                android:id="@+id/txtInterest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/custominput"
@@ -102,9 +108,13 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <SeekBar
+            android:id="@+id/sbInterest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp" />
+            android:layout_marginVertical="10dp"
+            android:max="50"
+            android:min="1"
+            android:progress="10" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -122,6 +132,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
+                android:id="@+id/txtYears"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/custominput"
@@ -136,9 +147,13 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <SeekBar
+            android:id="@+id/sbYears"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp" />
+            android:layout_marginVertical="10dp"
+            android:max="25"
+            android:min="1"
+            android:progress="1" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -164,6 +179,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/fMonthlyEmi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito_bold"
@@ -193,6 +209,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/fPrincipleAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito_bold"
@@ -222,6 +239,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/fTotalInterest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito_bold"
@@ -251,6 +269,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/fTotalAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito_bold"
