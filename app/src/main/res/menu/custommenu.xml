@@ -23,7 +23,6 @@
         app:showAsAction="always">
 
         <menu>
-
             <item
                 android:id="@+id/contact"
                 android:title="Contact" />

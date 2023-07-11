@@ -29,7 +29,6 @@ public class OptionMenuActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
         int id = item.getItemId();
         switch (id) {
             case R.id.home:

@@ -33,14 +33,6 @@ public class AnimationsActivity extends AppCompatActivity {
             }
         });
 
-        btnMove.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Animation move = AnimationUtils.loadAnimation(AnimationsActivity.this, R.anim.move);
-                imageView.startAnimation(move);
-            }
-        });
-
         btnAlpha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
