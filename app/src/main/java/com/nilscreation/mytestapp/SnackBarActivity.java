@@ -35,7 +35,7 @@ public class SnackBarActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                constraintLayout.setBackgroundColor(getResources().getColor(R.color.card_background2));
+                constraintLayout.setBackgroundColor(getResources().getColor(R.color.main_background2));
 
                 Snackbar.make(constraintLayout, "Background Color Changed", Snackbar.LENGTH_INDEFINITE).setAction("UNDO", new View.OnClickListener() {
                             @Override

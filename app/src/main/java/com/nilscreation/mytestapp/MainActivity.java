@@ -275,7 +275,7 @@ public class MainActivity extends AppCompatActivity {
         demoActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, DemoActivity.class);
+                Intent intent = new Intent(MainActivity.this, SQLiteActivity.class);
                 startActivity(intent);
             }
         });
