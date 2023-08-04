@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     CardView lifeCycle, onBoarding, snackBar, radioButton, spinner, autoCompleteTextView, tableLayout, animations, dialog,
             customDialog, listview, recyclerView, notification, bundlePassing, tabLayout, optionMenu, customToolbar,
             navigation, bottomNavigationView, clipBoard, sharedPreferences, notesapp, calculator, bmiCalculator, emiCalculator, demoActivity,
-            retrofitLibrary, firebaseRealtime, firebaseAuthentication;
+            volleyLibrary, retrofitLibrary, firebaseRealtime, firebaseAuthentication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         bmiCalculator = findViewById(R.id.bmiCalculator);
         emiCalculator = findViewById(R.id.emiCalculator);
         demoActivity = findViewById(R.id.demoactivity);
+        volleyLibrary = findViewById(R.id.volleyLibrary);
         retrofitLibrary = findViewById(R.id.retrofitLibrary);
         firebaseRealtime = findViewById(R.id.firebaseRealtime);
         firebaseAuthentication = findViewById(R.id.firebaseAuth);
@@ -283,6 +284,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, RetrofitLibActivity.class);
+                startActivity(intent);
+            }
+        });
+        volleyLibrary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, VolleyLibActivity.class);
                 startActivity(intent);
             }
         });

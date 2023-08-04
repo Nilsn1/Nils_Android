@@ -1,6 +1,8 @@
 package com.nilscreation.mytestapp.Adapters;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,11 +60,30 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
         holder.noteBackground.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                DBHandler dbHandler = new DBHandler(context);
-                dbHandler.deleteData(notes.getTitle());
-                noteslist.remove(notes);
-                notifyDataSetChanged();
-                Toast.makeText(context, "Note Deleted Successfully", Toast.LENGTH_SHORT).show();
+
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
+                alertDialog.setTitle("Delete");
+                alertDialog.setMessage("Do you really want to Delete?");
+                alertDialog.setCancelable(false);
+
+                alertDialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+
+                alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        DBHandler dbHandler = new DBHandler(context);
+                        dbHandler.deleteData(notes.getTitle());
+                        noteslist.remove(notes);
+                        notifyDataSetChanged();
+                        Toast.makeText(context, "Note Deleted Successfully", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                alertDialog.show();
                 return false;
             }
         });
