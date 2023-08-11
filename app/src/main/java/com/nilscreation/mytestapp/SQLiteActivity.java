@@ -19,9 +19,7 @@ import java.util.ArrayList;
 public class SQLiteActivity extends AppCompatActivity {
 
     FloatingActionButton btnAdd;
-
     RecyclerView recyclerview;
-
     ArrayList<NotesModel> noteslist;
     NotesAdapter adapter;
 

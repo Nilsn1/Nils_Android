@@ -24,9 +24,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class VolleyLibActivity extends AppCompatActivity {
-
     RecyclerView recyclerview;
-
     ArrayList<UserModel> userlist;
 
     @Override
@@ -39,12 +37,10 @@ public class VolleyLibActivity extends AppCompatActivity {
         userlist = new ArrayList<>();
 
         loadData();
-
     }
 
     private void loadData() {
         String url = "https://nilsn1.github.io/nilscreation/demo.json";
-
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -65,7 +61,6 @@ public class VolleyLibActivity extends AppCompatActivity {
                     UserAdapter adapter = new UserAdapter(VolleyLibActivity.this, userlist);
                     recyclerview.setAdapter(adapter);
                 }
-
             }
         }, new Response.ErrorListener() {
             @Override

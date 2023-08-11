@@ -15,11 +15,9 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
 public class NavigationActivity extends AppCompatActivity {
-
     DrawerLayout drawerLayout;
     Toolbar toolbar;
     NavigationView navigationView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,42 +35,6 @@ public class NavigationActivity extends AppCompatActivity {
         toggle.syncState();
 
         navigationView.setCheckedItem(R.id.home);
-
-//        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//
-//                switch (item.getItemId()){
-//
-//                    case R.id.home:
-//                        Intent intent = new Intent(NavigationActivity.this, NavigationActivity.class);
-//                        startActivity(intent);
-//                        break;
-//
-//                    case R.id.setting:
-//                        Toast.makeText(NavigationActivity.this,"Setting",Toast.LENGTH_SHORT).show();
-//                        break;
-//
-//                    case R.id.about:
-//                        Toast.makeText(NavigationActivity.this,"Setting",Toast.LENGTH_SHORT).show();
-//                        break;
-//
-//                    case R.id.fav:
-//                        Toast.makeText(NavigationActivity.this,"Setting",Toast.LENGTH_SHORT).show();
-//                        break;
-//
-//                    case R.id.item1:
-//                        Toast.makeText(NavigationActivity.this,"Item1",Toast.LENGTH_SHORT).show();
-//                        break;
-//
-//                    case R.id.exit:
-//                        finishAffinity();
-//
-//                }
-//                drawerLayout.closeDrawer(GravityCompat.START);
-//                return true;
-//            }
-//        });
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -116,9 +78,4 @@ public class NavigationActivity extends AppCompatActivity {
         }
     }
 
-    //    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        navigationView.setCheckedItem(R.id.home);
-//    }
 }

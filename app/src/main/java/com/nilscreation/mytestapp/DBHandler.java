@@ -15,7 +15,6 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String DB_NAME = "MyDB";
     private static final int DB_VERSION = 2;
     private static final String TABLE_NAME = "Notes";
-
     private static final String COL_ID = "id";
     private static final String COL_TITLE = "title";
     private static final String COL_DESCRIPTION = "description";
@@ -62,7 +61,6 @@ public class DBHandler extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getReadableDatabase();
         ArrayList<NotesModel> noteslist = new ArrayList<>();
-
 //      Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME + " ORDER BY " + COL_TIME + " DESC", null);
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
 
@@ -98,5 +96,4 @@ public class DBHandler extends SQLiteOpenHelper {
         addData(Title, Description, Time);
         db.close();
     }
-
 }
