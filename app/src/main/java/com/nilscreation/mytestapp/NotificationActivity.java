@@ -1,8 +1,5 @@
 package com.nilscreation.mytestapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.res.ResourcesCompat;
-
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -10,6 +7,12 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+import androidx.core.content.res.ResourcesCompat;
+
 
 public class NotificationActivity extends AppCompatActivity {
 
@@ -52,4 +55,25 @@ public class NotificationActivity extends AppCompatActivity {
 
         nm.notify(NOTIFICATION_ID, notification);
     }
+
+    private void showNotification() {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "new channel", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            manager.createNotificationChannel(channel);
+
+        }
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(NotificationActivity.this, CHANNEL_ID);
+        builder.setContentTitle("Title")
+                .setContentText("Content Text")
+                .setSmallIcon(R.drawable.emoji)
+                .setPriority(Notification.PRIORITY_DEFAULT);
+
+        NotificationManagerCompat compat = NotificationManagerCompat.from(NotificationActivity.this);
+        compat.notify(NOTIFICATION_ID, builder.build());
+
+    }
+
 }

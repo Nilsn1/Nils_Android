@@ -20,6 +20,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
+            android:name=".DemoActivity"
+            android:exported="false" />
+        <activity
             android:name=".VolleyLibActivity"
             android:exported="false" />
         <activity
@@ -102,9 +105,6 @@
         </activity>
         <activity
             android:name=".TableLayoutActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DemoActivity"
             android:exported="false" />
         <activity
             android:name=".CalculatorActivity"

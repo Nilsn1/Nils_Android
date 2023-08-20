@@ -18,6 +18,7 @@ public class NavigationActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     Toolbar toolbar;
     NavigationView navigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +56,7 @@ public class NavigationActivity extends AppCompatActivity {
                 } else if (id == R.id.fav) {
                     Toast.makeText(NavigationActivity.this, "Favourite", Toast.LENGTH_SHORT).show();
 
-                } else if (id == R.id.item1) {
+                } else if (id == R.id.item2) {
                     Toast.makeText(NavigationActivity.this, "Item1", Toast.LENGTH_SHORT).show();
 
                 } else {
@@ -71,9 +72,9 @@ public class NavigationActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        } else{
+        } else {
             super.onBackPressed();
         }
     }
